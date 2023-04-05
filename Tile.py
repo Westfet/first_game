@@ -1,4 +1,4 @@
-from utils import getTiles
+from getTiles import getTiles
 
 
 class Tile:

@@ -2,7 +2,7 @@ import pygame
 from Map import Map
 from Ball import Ball
 from Tile import Tile
-from utils import getTiles
+from getTiles import getTiles
 
 pygame.init()
 WINDOW_WIDTH = 800

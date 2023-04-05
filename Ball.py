@@ -1,4 +1,4 @@
-from utils import getTiles
+from getTiles import getTiles
 from constants import WINDOW_WIDTH, WINDOW_HEIGHT, TILE_SIZE
 
 
