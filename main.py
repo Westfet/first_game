@@ -1,12 +1,11 @@
 import pygame
 from Map import Map
+from constants import WINDOW_WIDTH, WINDOW_HEIGHT
 from Ball import Ball
 from Tile import Tile
 from getTiles import getTiles
 
 pygame.init()
-WINDOW_WIDTH = 800
-WINDOW_HEIGHT = 600
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 # images = [getTiles(['images/Characters/Aquatic0.png'], 0, 3)[0],
 #           getTiles(['images/Characters/Aquatic1.png'], 0, 3)[0]]
