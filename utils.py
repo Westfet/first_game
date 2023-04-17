@@ -1,20 +1,31 @@
-from constants import animated_tiles, map_rows, WINDOW_WIDTH
+from constants import animated_tiles, x_symbols, y_symbols
 
 
 def isTileAnimated(x):
     return x in animated_tiles
 
 
-def pos_wall(x, y, size):
-    dx = size - WINDOW_WIDTH
-    dy = size - map_rows * size
-    to_00 = [[0, 0], [dx, 0], [0, dy], [dx, dy],
-             [-x, dy], [-x, 0], [0, -y], [dx, -y]]
-    pos = 0
-    for i, j in enumerate(to_00):
-        x1 = x + j[0]
-        y1 = y + j[1]
-        if x1 == 0 and y1 == 0:
-            pos = i
-            break
-    return pos
+def out(x, y, x_symbols, y_symbols):
+    return x < 0 or x > x_symbols - 1 or y < 0 or y > y_symbols - 1
+
+
+def pos_wall(x, y, array):
+    around = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+    pos_array = ["top", "bottom", "left", "right"]
+    pos = []
+    for i, j in enumerate(around):
+        dx = x + j[0]
+        dy = y + j[1]
+        if not (out(dx, dy, x_symbols, y_symbols)):
+            if array[dy][dx] == "#":
+                pos.append(pos_array[i])
+    return "_".join(pos)
+
+
+array = [
+    ['#', '#', ' '],
+    [' ', '#', ' '],
+    [' ', ' ', ' '],
+]
+
+print(pos_wall(1, 0, array))

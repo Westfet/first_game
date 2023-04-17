@@ -1,7 +1,7 @@
 import pygame
 from Map import Map
 from constants import WINDOW_WIDTH, WINDOW_HEIGHT
-from Ball import Ball
+from Game import Ball
 from Tile import Tile
 from getTiles import getTiles
 
