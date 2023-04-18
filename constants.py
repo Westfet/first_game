@@ -7,10 +7,16 @@ x_symbols = 40
 images_wall = {
     "top_left": [['images/Objects/Wall.png'], 0, 3],
     "top_right": [['images/Objects/Wall.png'], 2, 3],
-    "top_bottom": [['images/Objects/Wall.png'], 0, 4],
+    "vertical": [['images/Objects/Wall.png'], 0, 4],
     "bottom_left": [['images/Objects/Wall.png'], 0, 5],
     "bottom_right": [['images/Objects/Wall.png'], 2, 5],
-    "left_right": [['images/Objects/Wall.png'], 1, 3],
+    "horizontal": [['images/Objects/Wall.png'], 1, 3],
+    "top_bottom_left": [['images/Objects/Wall.png'], 3, 4],
+    "top_bottom_right": [['images/Objects/Wall.png'], 5, 4],
+    "top_left_right": [['images/Objects/Wall.png'], 4, 3],
+    "bottom_left_right": [['images/Objects/Wall.png'], 4, 5],
+    "top_bottom_left_right": [['images/Objects/Wall.png'], 4, 4]
+
 }
 
 image_floor = [['images/Objects/Floor.png'], 1, 11]

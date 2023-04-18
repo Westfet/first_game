@@ -19,13 +19,18 @@ def pos_wall(x, y, array):
         if not (out(dx, dy, x_symbols, y_symbols)):
             if array[dy][dx] == "#":
                 pos.append(pos_array[i])
-    return "_".join(pos)
+    if ('top' not in pos) and ('bottom' not in pos):
+        return "horizontal"
+    elif ('left' not in pos) and ('right' not in pos):
+        return "vertical"
+    else:
+        return "_".join(pos)
 
 
 array = [
-    ['#', '#', ' '],
-    [' ', '#', ' '],
     [' ', ' ', ' '],
+    [' ', '#', ' '],
+    [' ', '#', ' '],
 ]
 
-print(pos_wall(1, 0, array))
+print(pos_wall(1, 1, array))
