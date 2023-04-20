@@ -1,3 +1,5 @@
+from enum import Enum
+
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
 TILE_SIZE = 16
@@ -29,3 +31,16 @@ map_img = {
 
 }
 animated_tiles = ["*"]
+
+images_character = {
+    "player_character": [['images/Commissions/Paladin.png'], 0, 0]
+}
+
+#  Enum используется для организации корректной работы с константами (часто использующиеся
+#  переменные)
+class Direction(Enum):
+    UP = 0
+    RIGHT = 1
+    DOWN = 2
+    LEFT = 3
+
