@@ -25,12 +25,3 @@ def pos_wall(x, y, array):
         return "vertical"
     else:
         return "_".join(pos)
-
-
-array = [
-    [' ', ' ', ' '],
-    [' ', '#', ' '],
-    [' ', '#', ' '],
-]
-
-print(pos_wall(1, 1, array))

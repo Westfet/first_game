@@ -1,5 +1,3 @@
-from getTiles import getTiles
-
 
 class Tile:
 
@@ -9,14 +7,15 @@ class Tile:
         self.images = images
         self.is_animated = is_animated
         self.rect = self.images[0].get_rect(topleft=(self.x, self.y))
-        self.animation_counter = 100
+        self.animation_counter = 0
 
     def display(self, screen):
         if self.is_animated:
-            self.animation_counter -= 1
-            if not self.animation_counter:
-                self.animation_counter = 100
-            screen.blit(self.images[int(self.animation_counter > 50)],
-                        self.rect)
+            fps = 30
+            self.animation_counter += 1
+            screen.blit(self.images[self.animation_counter // fps], self.rect)
+            if self.animation_counter == (len(self.images) * fps) - 1:
+                self.animation_counter = 0
         else:
             screen.blit(self.images[0], self.rect)
+
